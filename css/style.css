@@ -96,7 +96,7 @@ ctn-menu .menu li a::after {
 }
 /* ************** HEADER ************** */
 .header {
-	background: url(../assets/img/bg.jpg) center / cover;
+	background: url(/assets/img/bg.jpg) center / cover;
 	height: 70vh;
 	display: flex;
 	flex-direction: column;
@@ -214,6 +214,7 @@ ctn-menu .menu li a::after {
 }
 
 .news-title p {
+	font-size: 22px;
 	line-height: 50px;
 	font-weight: 600;
 }
@@ -265,7 +266,6 @@ ctn-menu .menu li a::after {
 
 .news p {
 	font-weight: 600;
-	font-size: 16px;
 	line-height: 25px;
 }
 
@@ -308,18 +308,18 @@ ctn-menu .menu li a::after {
 	width: 20%;
 }
 .footer-element img {
-	/* width: 250px; */
-	width: 100%;
+	width: 250px;
 }
 h5 {
 	text-transform: uppercase;
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 	margin-bottom: 30px;
 }
 .footer-element li {
 	margin-bottom: 30px;
 }
 .footer-element a {
+	font-size: 18px;
 	font-weight: 900;
 	color: var(--colorlink);
 }
