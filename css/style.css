@@ -17,11 +17,11 @@
 
 @font-face {
 	font-family: montserrat-thin;
-	src: url(/assets/font/Montserrat-Thin.ttf);
+	src: url(../assets/font/Montserrat-Thin.ttf);
 }
 @font-face {
 	font-family: montserrat-medium;
-	src: url(/assets/font/Montserrat-Medium.ttf);
+	src: url(../assets/font/Montserrat-Medium.ttf);
 }
 body {
 	font-family: 'montserrat-medium', sans-serif;
@@ -42,7 +42,7 @@ a {
 .menu,
 .menu li {
 	display: flex;
-	justify-content:center;
+	justify-content: space-around;
 	align-items: center;
 	height: 10vh;
 	background: var(--colorbgwhite);
@@ -54,7 +54,7 @@ a {
 	font-size: 18px;
 	padding: 0 25px;
 	position: relative;
-    transition : 300ms;
+	transition: 300ms;
 }
 .ctn-menu .menu li a::after,
 #active::after {
@@ -65,7 +65,7 @@ a {
 	top: -15px;
 	left: 50%;
 	transform: translate(-50%, -50%);
-    transition: 300ms;
+	transition: 300ms;
 }
 #active {
 	color: var(--colorlink);
@@ -96,7 +96,7 @@ ctn-menu .menu li a::after {
 }
 /* ************** HEADER ************** */
 .header {
-	background: url(/assets/img/bg.jpg) center / cover;
+	background: url(../assets/img/bg.jpg) center / cover;
 	height: 70vh;
 	display: flex;
 	flex-direction: column;
@@ -309,7 +309,7 @@ ctn-menu .menu li a::after {
 }
 .footer-element img {
 	/* width: 250px; */
-    width: 100%
+	width: 100%;
 }
 h5 {
 	text-transform: uppercase;
@@ -336,10 +336,10 @@ h5 {
 i {
 	font-size: 30px;
 	margin-right: 20px;
-    transition: 300ms;
+	transition: 300ms;
 }
-i:hover{
-    transform: scale(1.1);
+i:hover {
+	transform: scale(1.1);
 }
 /* Separation footer */
 #footer-separation {
