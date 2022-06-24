@@ -96,7 +96,7 @@ ctn-menu .menu li a::after {
 }
 /* ************** HEADER ************** */
 .header {
-	background: url(/assets/img/bg.jpg) center / cover;
+	background: url(../assets/img/bg.jpg) center / cover;
 	height: 70vh;
 	display: flex;
 	flex-direction: column;
