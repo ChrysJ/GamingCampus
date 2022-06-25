@@ -238,6 +238,7 @@ ctn-menu .menu li a::after {
 }
 .news {
 	width: 25%;
+	position: relative;
 }
 .news img {
 	width: 100%;
@@ -250,30 +251,25 @@ ctn-menu .menu li a::after {
 }
 .news p {
 	line-height: 25px;
+	padding-bottom: 50px;
 }
-.ctn-btn-news a {
+.news a {
 	font-size: 16px;
 	font-weight: 600;
 	color: var(--colorlink);
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	transition: 300ms;
+	position: absolute;
+	bottom: 0;
+	
 }
-.ctn-btn-news a::after , .news a::after {
+.news a::after{
 	content: '\276F';
 	margin-left: 20px;
 }
-.ctn-btn-news .btn-news:hover {
+.news a:hover {
 	transform: translate(30px);
-}
-.ctn-btn-news {
-	margin-top: 35px;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-.btn-news {
-	width: 25%;
-	transition: 300ms;
 }
 /* ************** FOOTER ************** */
 .ctn-main-footer {
@@ -357,11 +353,6 @@ h6 {
 	justify-content: space-between;
 	align-items: center;
 }
-@media screen and (min-width: 1200px) {
-	.news a {
-		display: none;
-	}
-}
 @media screen and (max-width: 1200px) {
 	/* ************** NAV ************** */
 	.ctn-menu .menu,
@@ -415,17 +406,12 @@ h6 {
 		line-height: normal;
 		margin-bottom: 20px;
 	}
-	.ctn-btn-news a,
 	.news a {
 		font-size: 16px;
 		font-weight: 600;
 		color: var(--colorlink);
 		text-transform: uppercase;
 		letter-spacing: 2px;
-	}
-
-	.btn-news {
-		width: 30%;
 	}
 	/* ************** FOOTER ************** */
 	/* Top footer */
