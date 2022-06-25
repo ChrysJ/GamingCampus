@@ -229,7 +229,6 @@ ctn-menu .menu li a::after {
 }
 .news {
 	width: 25%;
-	max-width: 450px;
 	position: relative;
 }
 .news img {
@@ -240,7 +239,7 @@ ctn-menu .menu li a::after {
 }
 .news h4 {
 	font-size: 1.2rem;
-	margin: 20px 0;
+	margin: 40px 0 20px;
 }
 .news p {
 	line-height: 25px;
@@ -332,9 +331,10 @@ h5 {
 	background: var(--colorbgblack);
 	padding: 5vh 15vw;
 }
-h6 {
+.ctn-main-partner h6 {
+	text-transform: uppercase;
 	font-weight: 100;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	color: var(--colorwhite);
 	text-align: center;
 	margin-bottom: 50px;
@@ -357,7 +357,7 @@ h6 {
 	}
 	/* ************** SERVICES ************** */
 	.ctn-main-services {
-		padding: 5vh 5vw;
+		padding: 7vh 5vw;
 	}
 	.services h2 {
 		margin: 40px 0 20px;
@@ -366,7 +366,7 @@ h6 {
 	/* ************** NEWS ************** */
 	/* Title */
 	.ctn-main-news {
-		padding: 5vh 5vw;
+		padding: 7vh 5vw;
 	}
 
 	.news-title {
@@ -424,13 +424,13 @@ h6 {
 		grid-template-columns: 100%;
 	}
 	.ctn-main-partner {
-		padding: 5vh 5vw;
+		padding: 7vh 5vw;
 	}
 	.ctn-main-partner img {
 		width: 50px;
 	}
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 	/* ************** NAV ************** */
 	.ctn-menu {
 		display: none;
@@ -467,11 +467,12 @@ h6 {
 		align-items: center;
 	}
 	.news {
-		width: 95%;
+		width: 90%;
 		margin: 30px 0;
 	}
 	.news img {
-		width: 60%;
+		width: 40%;
+		min-width: 250px;
 		margin: 25px 0;
 		display: block;
 		margin: 0 auto;
@@ -512,11 +513,16 @@ h6 {
 	.footer-element li {
 		margin-bottom: 15px;
 	}
-	.ctn-footer-bot {
-		display: none;
+
+	.ctn-footer-bot h5, .ctn-footer-bot p{
+		text-align: center;
+	}
+
+	.ctn-footer-bot img {
+		width: 7%;
 	}
 	/* ************** PARTNER ************** */
-	h6 {
+	.ctn-main-partner h6 {
 		margin-bottom: 35px;
 	}
 	.ctn-partner img {
