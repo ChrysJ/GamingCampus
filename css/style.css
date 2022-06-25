@@ -143,7 +143,7 @@ ctn-menu .menu li a::after {
 .ctn-main-services,
 .services {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 .ctn-services {
@@ -157,7 +157,7 @@ ctn-menu .menu li a::after {
 }
 .services {
 	flex-direction: column;
-	width: 27%;
+	width: 25%;
 }
 .services h2,
 .services p {
@@ -314,7 +314,7 @@ h5 {
 }
 /* Bottom footer */
 .ctn-footer-bot {
-	padding: 7vh 15vw 7vh 10vw;
+	padding: 7vh 15vw;
 	display: grid;
 	grid-template-columns: 35% 65%;
 }
@@ -346,7 +346,7 @@ h6 {
 }
 
 /* **************  MEDIA QUERIES ************** */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
 	/* ************** NAV ************** */
 	.ctn-menu .menu li a {
 		font-size: 14px;
@@ -535,5 +535,20 @@ h6 {
 	.header a {
 		padding: 15px;
 		font-size: 14px;
+	}
+}
+@media screen and (min-width: 2500px) {
+	.ctn-subheader,
+	.ctn-main-services,
+	.ctn-main-news,
+	.ctn-footer-top {
+		padding: 10vh 25vw;
+	}
+	.ctn-footer-bot,
+	.ctn-main-partner {
+		padding: 5vh 25vw;
+	}
+	#footer-separation {
+		width: 40%;
 	}
 }
