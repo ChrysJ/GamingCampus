@@ -5,20 +5,13 @@
 	--colorwhite: #ffffff;
 	--colorblack: #000000;
 }
-
 /* ************** Reset CSS ************** */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 /* ************** FONT ************** */
-
-@font-face {
-	font-family: montserrat-thin;
-	src: url(../assets/font/Montserrat-Thin.ttf);
-}
 @font-face {
 	font-family: montserrat-medium;
 	src: url(../assets/font/Montserrat-Medium.ttf);
@@ -30,7 +23,6 @@ body {
 p {
 	font-size: 18px;
 }
-
 /* ************** NAV ************** */
 li {
 	list-style-type: none;
@@ -48,11 +40,11 @@ a {
 	background: var(--colorbgwhite);
 }
 .ctn-menu .menu li a {
-	color: #000000;
+	color: var(--colorblack);
 	text-transform: uppercase;
-	font-weight: 800;
+	font-weight: 900;
 	font-size: 18px;
-	padding: 0 25px;
+	padding: 0 20px;
 	position: relative;
 	transition: 300ms;
 }
@@ -67,12 +59,6 @@ a {
 	transform: translate(-50%, -50%);
 	transition: 300ms;
 }
-#active {
-	color: var(--colorlink);
-}
-#active::after {
-	background: var(--colorlink);
-}
 ctn-menu .menu li a::after {
 	background: transparent;
 }
@@ -82,21 +68,30 @@ ctn-menu .menu li a::after {
 .ctn-menu .menu li a:hover {
 	color: var(--colorlink);
 }
+#active {
+	color: var(--colorlink);
+}
+#active::after {
+	background: var(--colorlink);
+}
 #language {
 	background-color: #e0e0e0;
 	height: fit-content;
-	padding: 10px;
+	padding: 10px 20px;
 	border-radius: 50px;
 }
 #language a {
 	padding: 5px;
 }
 #language a:hover::after {
-	background: transparent;
+	background: none;
+}
+#active-language {
+	color: var(--colorlink);
 }
 /* ************** HEADER ************** */
 .header {
-	background: url(../assets/img/bg.jpg) center / cover;
+	background: url(../assets/img/bg.jpg) fixed center / cover;
 	height: 70vh;
 	display: flex;
 	flex-direction: column;
@@ -112,7 +107,6 @@ ctn-menu .menu li a::after {
 }
 .header a {
 	text-transform: uppercase;
-	font-weight: 500;
 	letter-spacing: 3px;
 	font-size: 16px;
 	color: var(--colorwhite);
@@ -135,14 +129,11 @@ ctn-menu .menu li a::after {
 	height: 20vh;
 	padding: 0 10vw;
 	background: var(--colorbgwhite);
-}
-.sub-header {
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.sub-header p {
+.ctn-subheader p {
 	font-size: 22px;
 	text-align: center;
 	font-weight: 600;
@@ -166,7 +157,7 @@ ctn-menu .menu li a::after {
 }
 .services {
 	flex-direction: column;
-	width: 25%;
+	width: 27%;
 }
 .services h2,
 .services p {
@@ -175,7 +166,7 @@ ctn-menu .menu li a::after {
 .services h2 {
 	text-transform: uppercase;
 	font-size: 1.2rem;
-	margin: 40px 0 15px;
+	margin: 40px 0 20px;
 	text-align: center;
 }
 .services p {
@@ -238,12 +229,14 @@ ctn-menu .menu li a::after {
 }
 .news {
 	width: 25%;
+	max-width: 450px;
 	position: relative;
 }
 .news img {
 	width: 100%;
 	box-shadow: 1px 1px 7px;
 	border-radius: 5px;
+	object-fit: cover;
 }
 .news h4 {
 	font-size: 1.2rem;
@@ -251,7 +244,7 @@ ctn-menu .menu li a::after {
 }
 .news p {
 	line-height: 25px;
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 }
 .news a {
 	font-size: 16px;
@@ -262,9 +255,8 @@ ctn-menu .menu li a::after {
 	transition: 300ms;
 	position: absolute;
 	bottom: 0;
-	
 }
-.news a::after{
+.news a::after {
 	content: '\276F';
 	margin-left: 20px;
 }
@@ -280,10 +272,9 @@ ctn-menu .menu li a::after {
 	padding: 10vh 15vw;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 100%;
 }
 .footer-element {
-	width: 80%;
+	width: 75%;
 }
 .footer-element img {
 	width: 100%;
@@ -292,10 +283,10 @@ ctn-menu .menu li a::after {
 h5 {
 	text-transform: uppercase;
 	font-size: 1.2rem;
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 }
 .footer-element li {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .footer-element a {
 	font-size: 18px;
@@ -304,22 +295,22 @@ h5 {
 }
 .footer-element p,
 .footer-element div a {
-	font-weight: 600;
 	line-height: 30px;
 	color: var(--colorblack);
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .footer-element div {
 	margin-bottom: 40px;
 }
-i {
+.footer-element i {
 	font-size: 30px;
-	margin-right: 20px;
+	margin-right: 15px;
 }
 /* Separation footer */
 #footer-separation {
 	width: 60%;
 	margin: 0 auto;
+	border: #ebebeb 1px solid;
 }
 /* Bottom footer */
 .ctn-footer-bot {
@@ -342,7 +333,7 @@ i {
 	padding: 5vh 15vw;
 }
 h6 {
-	font-family: 'montserrat-thin', sans-serif;
+	font-weight: 100;
 	font-size: 1.5rem;
 	color: var(--colorwhite);
 	text-align: center;
@@ -353,11 +344,12 @@ h6 {
 	justify-content: space-between;
 	align-items: center;
 }
+
+/* **************  MEDIA QUERIES ************** */
 @media screen and (max-width: 1200px) {
 	/* ************** NAV ************** */
-	.ctn-menu .menu,
-	.menu {
-		display: none;
+	.ctn-menu .menu li a {
+		font-size: 14px;
 	}
 	/* ************** SUBHEADER ************** */
 	.ctn-subheader {
@@ -366,9 +358,6 @@ h6 {
 	/* ************** SERVICES ************** */
 	.ctn-main-services {
 		padding: 5vh 5vw;
-	}
-	.services {
-		width: 30%;
 	}
 	.services h2 {
 		margin: 40px 0 20px;
@@ -386,31 +375,18 @@ h6 {
 	}
 
 	.news-title h3 {
-		text-transform: uppercase;
 		font-size: 1.6rem;
-		font-weight: 500;
-		letter-spacing: 3px;
 	}
-
 	.news-title p {
-		line-height: normal;
-		margin: 15px 0 50px 0;
+		margin: 15px 0 5vh 0;
 	}
-
 	/* NEWS */
 	.news {
 		width: 30%;
 	}
-
-	.news p {
-		line-height: normal;
-		margin-bottom: 20px;
-	}
 	.news a {
 		font-size: 16px;
-		font-weight: 600;
 		color: var(--colorlink);
-		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
 	/* ************** FOOTER ************** */
@@ -421,13 +397,9 @@ h6 {
 		grid-template-rows: auto auto;
 		row-gap: 3rem;
 	}
-	.footer-element {
-		width: 75%;
-	}
 	.footer-img {
 		width: 100%;
 		grid-column: 2/3;
-		grid-row: 1/2;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -437,10 +409,6 @@ h6 {
 	.info-footer3 {
 		grid-row: 2/3;
 	}
-	/* Separation footer */
-	#footer-separation {
-		width: 70%;
-	}
 	/* Bottom footer */
 	.ctn-mediapress {
 		display: flex;
@@ -449,122 +417,123 @@ h6 {
 	}
 	.ctn-footer-bot div p {
 		font-size: 22px;
-		margin-bottom: 50px;
+		margin-bottom: 5vh;
 	}
 	.ctn-footer-bot {
+		padding: 5vh 5vw;
 		grid-template-columns: 100%;
 	}
 	.ctn-main-partner {
-		padding: 2vh 5vw;
+		padding: 5vh 5vw;
 	}
 	.ctn-main-partner img {
 		width: 50px;
 	}
-	@media screen and (max-width: 1000px) {
-		/* ************** NAV ************** */
-		.ctn-menu,
-		.menu,
-		.menu li {
-			display: none;
-		}
-		/* ************** HEADER ************** */
-		.header {
-			height: 80vh;
-		}
-		.header img {
-			width: 60%;
-		}
-		.sub-header p {
-			font-size: 18px;
-			line-height: 30px;
-		}
-		/* ************** SERVICES ************** */
-		.ctn-services {
-			flex-direction: column;
-		}
-		.services {
-			margin: 25px 0;
-			width: 90%;
-		}
-		/* ************** NEWS ************** */
-		.news-title h3,
-		.news-title p {
-			text-align: center;
-		}
-		.news-title h3 {
-			font-size: 1.2rem;
-		}
-		.news-title p {
-			font-size: 18px;
-		}
-		#btn-newsroom {
-			margin: 0 auto;
-		}
-		.ctn-news {
-			flex-direction: column;
-			align-items: center;
-		}
-		.news {
-			width: 95%;
-			margin: 25px 0;
-		}
-		.news img {
-			width: 50%;
-			margin: 25px 0;
-			display: block;
-			margin: 0 auto;
-		}
-		.ctn-btn-news {
-			display: none;
-		}
-		/* ************** FOOTER ************** */
-		.footer-element img {
-			width: 30%;
-		}
-		.ctn-footer-top {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			row-gap: 0;
-		}
-		.footer-element {
-			text-align: center;
-			margin: 25px 0;
-		}
-		.ctn-footer-bot {
-			padding: 5vh 5vw;
-		}
-		.ctn-mediapress img {
-			margin: 5px;
-		}
-		@media screen and (max-width: 750px) {
-			.sub-header p {
-				line-height: normal;
-			}
-			.footer-element img {
-				width: 50%;
-			}
-			.footer-element li {
-				margin-bottom: 15px;
-			}
-			.ctn-footer-bot {
-				display: none;
-			}
-			h6 {
-				margin-bottom: 35px;
-			}
-			.ctn-partner img {
-				width: 7%;
-			}
-		}
-		@media screen and (max-width: 500px) {
-			.header img {
-				width: 100%;
-			}
-			.header a {
-				padding: 15px;
-				font-size: 14px;
-			}
+}
+@media screen and (max-width: 1000px) {
+	/* ************** NAV ************** */
+	.ctn-menu {
+		display: none;
+	}
+	/* ************** HEADER ************** */
+	.header {
+		height: 80vh;
+	}
+	.header img {
+		width: 80%;
+	}
+
+	/* ************** SERVICES ************** */
+	.ctn-services {
+		flex-direction: column;
+	}
+	.services {
+		margin: 25px 0;
+		width: 90%;
+	}
+	/* ************** NEWS ************** */
+	.news-title h3,
+	.news-title p {
+		text-align: center;
+	}
+	.news-title p {
+		line-height: 30px;
+	}
+	#btn-newsroom {
+		margin: 0 auto;
+	}
+	.ctn-news {
+		flex-direction: column;
+		align-items: center;
+	}
+	.news {
+		width: 95%;
+		margin: 30px 0;
+	}
+	.news img {
+		width: 60%;
+		margin: 25px 0;
+		display: block;
+		margin: 0 auto;
+	}
+	.news p {
+		margin-bottom: 40px;
+	}
+	/* ************** FOOTER ************** */
+	.ctn-footer-top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 0;
+	}
+	.footer-element {
+		text-align: center;
+		margin: 25px 0;
+	}
+	.footer-element img {
+		width: 30%;
+	}
+	.footer-element i {
+		margin: 0 15px;
+	}
+	.info-footer2 p {
+		margin-bottom: 10px;
 	}
 }
+@media screen and (max-width: 750px) {
+	/* ************** HEADER ************** */
+	.sub-header p {
+		line-height: normal;
+	}
+	/* ************** FOOTER ************** */
+	.footer-element img {
+		width: 50%;
+	}
+	.footer-element li {
+		margin-bottom: 15px;
+	}
+	.ctn-footer-bot {
+		display: none;
+	}
+	/* ************** PARTNER ************** */
+	h6 {
+		margin-bottom: 35px;
+	}
+	.ctn-partner img {
+		width: 7%;
+	}
+}
+@media screen and (max-width: 500px) {
+	/* ************** HEADER ************** */
+	.header h1 {
+		font-size: 1.3rem;
+	}
+	.ctn-subheader p {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.header a {
+		padding: 15px;
+		font-size: 14px;
+	}
 }
